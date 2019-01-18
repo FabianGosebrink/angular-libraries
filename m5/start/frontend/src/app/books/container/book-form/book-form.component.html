@@ -1,0 +1,38 @@
+<div class="button-row">
+  <a mat-raised-button routerLink="/books/overview">To Overview</a>
+</div>
+
+<form (ngSubmit)="addOrUpdateBook()" [formGroup]="form">
+  <div class="form-container">
+
+    <mat-form-field hidden>
+      <input matInput formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Author" formControlName="author">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Genre" formControlName="genre">
+        <mat-option *ngFor="let genre of genres" [value]="genre.value">
+          {{genre.displayName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" [disabled]="form.invalid || form.pristine">
+        {{!!this.form.value.id ? 'Update': 'Add'}}
+        Book</button>
+    </div>
+  </div>
+</form>

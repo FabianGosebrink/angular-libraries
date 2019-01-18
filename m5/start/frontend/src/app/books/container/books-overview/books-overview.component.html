@@ -1,0 +1,19 @@
+<mat-tab-group dynamicHeight (selectedTabChange)="loadBooks($event)">
+  <mat-tab label="to buy">
+    <app-book-list
+      [books]="currentBooks$ | async"
+      (bookChanged)="bookChanged($event)"
+    ></app-book-list>
+  </mat-tab>
+
+  <mat-tab label="read already">
+    <app-book-list
+      [books]="currentBooks$ | async"
+      (bookChanged)="bookChanged($event)"
+    ></app-book-list>
+  </mat-tab>
+</mat-tab-group>
+
+<button mat-fab class="fab-bottom-right">
+  <a [routerLink]="['/books/create']"> <mat-icon>add</mat-icon> </a>
+</button>

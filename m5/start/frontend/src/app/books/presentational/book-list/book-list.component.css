@@ -1,0 +1,15 @@
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.mat-raised-button {
+  margin-right: 10px;
+}
+
+.rated {
+  color: orange;
+}
+
+.rating-wrapper {
+  cursor: pointer;
+}
