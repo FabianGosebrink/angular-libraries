@@ -1,0 +1,13 @@
+mat-sidenav {
+  width: 320px;
+}
+
+.app-content-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-item {
+  width: 70%;
+}

@@ -1,0 +1,11 @@
+.mat-form-field-disabled .mat-form-field-underline {
+  height: 0;
+}
+
+.mat-input-element:disabled {
+  color: gray;
+}
+
+.mat-raised-button {
+  margin-right: 10px;
+}

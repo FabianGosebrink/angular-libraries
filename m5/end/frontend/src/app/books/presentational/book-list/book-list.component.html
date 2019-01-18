@@ -1,0 +1,37 @@
+<mat-list *ngIf="books?.length; else: noItems">
+  <mat-list-item *ngFor="let book of books">
+    <h2 matLine>{{ book.title }}</h2>
+    <p matLine>
+      <span> {{ book.author }} - {{ book.genre }}</span>
+    </p>
+
+    <p matLine>
+      <lib-angular-rating
+        [count]="10"
+        [rating]="book.rating"
+        (ratingChanged)="changeRating($event, book)"
+      ></lib-angular-rating>
+    </p>
+
+    <span class="fill-remaining-space"></span>
+    <a mat-raised-button [routerLink]="['/books/details', book.id]">Details</a>
+    <button
+      mat-raised-button
+      *ngIf="!book.read"
+      color="primary"
+      (click)="toggleBookRead(book)"
+    >
+      Read
+    </button>
+    <button
+      mat-raised-button
+      *ngIf="book.read"
+      color="primary"
+      (click)="toggleBookRead(book)"
+    >
+      Unread
+    </button>
+  </mat-list-item>
+</mat-list>
+
+<ng-template #noItems> <p>No Books to show</p> </ng-template>
