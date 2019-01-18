@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "module": "commonjs", // let is be xx modules
+        "target": "es5" // created modules should be  in the xx syntax
+    },
+    "include": ["./"]
+}
+
+// {
+//     "compilerOptions": {
+//         "outDir": "./dist/",
+//         "module": "commonjs", // let is be xx modules
+//         "target": "es6" // created modules should be  in the xx syntax
+//     },
+//     "include": ["./"]
+// }
