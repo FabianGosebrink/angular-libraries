@@ -1,0 +1,23 @@
+{
+  "name": "my-first",
+  "version": "0.0.1",
+  "author": "Fabian Gosebrink",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/core": ">=7.0.0",
+    "@angular/common": ">=7.0.0"
+  },
+  "main": "bundles/my-first.umd.js",
+  "module": "fesm5/my-first.js",
+  "es2015": "fesm2015/my-first.js",
+  "esm5": "esm5/my-first.js",
+  "esm2015": "esm2015/my-first.js",
+  "fesm5": "fesm5/my-first.js",
+  "fesm2015": "fesm2015/my-first.js",
+  "typings": "my-first.d.ts",
+  "metadata": "my-first.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

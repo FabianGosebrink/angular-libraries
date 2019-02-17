@@ -1,7 +1,7 @@
 /m4/first-consumer/dist
 /m4/first-ts-package/dist
 /m4/first-ts-package/*.tgz
-/m5/*/backend/aspnetcore/obj/
-/m5/*/backend/aspnetcore/bin/
-/m5/*/frontend/node_modules/
-/m5/end/frontend/dist/
+/m5/**/backend/aspnetcore/obj/
+/m5/**/backend/aspnetcore/bin/
+/m5/**/frontend/node_modules/
+/m5/**/end/frontend/dist/
