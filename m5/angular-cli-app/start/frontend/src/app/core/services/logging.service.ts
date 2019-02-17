@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class LoggingService {
   warn(message: string) {
     console.warn('custom warn:' + message);

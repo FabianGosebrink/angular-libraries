@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Book } from '../../shared/models/book';
+import { Book } from '@app/shared/models/book';
 import { HttpBaseService } from './http-base.service';
 
 @Injectable({ providedIn: 'root' })
@@ -30,7 +30,7 @@ export class BookService {
       { value: 'Action / Adventure', displayName: 'Action / Adventure' },
       { value: 'Satire', displayName: 'Satire' },
       { value: 'Horror', displayName: 'Horror' },
-      { value: 'Novel', displayName: 'Novel' }
+      { value: 'Novel', displayName: 'Novel' },
     ];
   }
 

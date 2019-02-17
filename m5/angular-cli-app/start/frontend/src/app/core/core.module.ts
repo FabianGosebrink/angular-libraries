@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { LoggingService } from './services/logging.service';
 
 @NgModule({
-  providers: [LoggingService],
+  providers: [],
 })
 export class CoreModule {}

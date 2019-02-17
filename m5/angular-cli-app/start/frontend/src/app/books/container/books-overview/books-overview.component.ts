@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material';
+import { BookService } from '@app/core/services/book.service';
+import { LoggingService } from '@app/core/services/logging.service';
+import { Book } from '@app/shared/models/book';
 import { Observable } from 'rxjs';
 import { share } from 'rxjs/operators';
-import { BookService } from '../../../core/services/book.service';
-import { LoggingService } from '../../../core/services/logging.service';
-import { Book } from '../../../shared/models/book';
 
 @Component({
   selector: 'app-books-overview',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { BookService } from '../../../core/services/book.service';
-import { NotificationService } from '../../../core/services/notification.service';
+import { ActivatedRoute } from '@angular/router';
+import { BookService } from '@app/core/services/book.service';
+import { NotificationService } from '@app/core/services/notification.service';
 
 @Component({
   selector: 'app-book-form',
@@ -15,7 +15,6 @@ export class BookFormComponent implements OnInit {
 
   constructor(
     private readonly bookService: BookService,
-    private readonly router: Router,
     private readonly notificationService: NotificationService,
     private readonly activatedRoute: ActivatedRoute
   ) {}
