@@ -21,7 +21,7 @@
         MyFirstComponent.decorators = [
             { type: core.Component, args: [{
                         selector: 'my-first',
-                        template: '<p>my first works</p>',
+                        template: "<p>my first works</p>",
                         styles: ['p {  color: green; font-size: 20px;} ']
                     }] }
         ];

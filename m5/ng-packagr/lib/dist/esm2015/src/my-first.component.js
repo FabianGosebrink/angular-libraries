@@ -13,10 +13,10 @@ export class MyFirstComponent {
 MyFirstComponent.decorators = [
     { type: Component, args: [{
                 selector: 'my-first',
-                template: '<p>my first works</p>',
+                template: "<p>my first works</p>",
                 styles: ['p {  color: green; font-size: 20px;} ']
             }] }
 ];
 /** @nocollapse */
 MyFirstComponent.ctorParameters = () => [];
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibXktZmlyc3QuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbXktZmlyc3QvIiwic291cmNlcyI6WyJzcmMvbXktZmlyc3QuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFVLE1BQU0sZUFBZSxDQUFDO0FBT2xELE1BQU0sT0FBTyxnQkFBZ0I7SUFDM0IsZ0JBQWUsQ0FBQzs7OztJQUVoQixRQUFRLEtBQUksQ0FBQzs7O1lBUmQsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxVQUFVO2dCQUNwQixRQUFRLEVBQUUsdUJBQXVCO3lCQUN4Qix1Q0FBdUM7YUFDakQiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIE9uSW5pdCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgc2VsZWN0b3I6ICdteS1maXJzdCcsXHJcbiAgdGVtcGxhdGU6ICc8cD5teSBmaXJzdCB3b3JrczwvcD4nLFxyXG4gIHN0eWxlczogWydwIHsgIGNvbG9yOiBncmVlbjsgZm9udC1zaXplOiAyMHB4O30gJ10sXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBNeUZpcnN0Q29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcclxuICBjb25zdHJ1Y3RvcigpIHt9XHJcblxyXG4gIG5nT25Jbml0KCkge31cclxufVxyXG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibXktZmlyc3QuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbXktZmlyc3QvIiwic291cmNlcyI6WyJzcmMvbXktZmlyc3QuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFVLE1BQU0sZUFBZSxDQUFDO0FBT2xELE1BQU0sT0FBTyxnQkFBZ0I7SUFDM0IsZ0JBQWUsQ0FBQzs7OztJQUVoQixRQUFRLEtBQUksQ0FBQzs7O1lBUmQsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxVQUFVO2dCQUNwQixpQ0FBc0M7eUJBQzdCLHVDQUF1QzthQUNqRCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgT25Jbml0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ215LWZpcnN0JyxcclxuICB0ZW1wbGF0ZVVybDogJ215LWZpcnN0LmNvbXBvbmVudC5odG1sJyxcclxuICBzdHlsZXM6IFsncCB7ICBjb2xvcjogZ3JlZW47IGZvbnQtc2l6ZTogMjBweDt9ICddLFxyXG59KVxyXG5leHBvcnQgY2xhc3MgTXlGaXJzdENvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XHJcbiAgY29uc3RydWN0b3IoKSB7fVxyXG5cclxuICBuZ09uSW5pdCgpIHt9XHJcbn1cclxuIl19

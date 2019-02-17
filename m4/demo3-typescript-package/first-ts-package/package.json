@@ -1,11 +1,10 @@
 {
-  "name": "testi",
-  "version": "3.1.4",
+  "name": "my-first-library",
+  "version": "0.0.1",
   "scripts": {
-    "build": "tsc",
-    "custom-publish": "npm run build && npm publish --registry http://localhost:4873"
+    "build": "tsc"
   },
-  "description": "Can log \"hello world\" and \"goodbye world\" to the console!",
+  "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts"
 }

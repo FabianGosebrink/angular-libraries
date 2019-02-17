@@ -8,6 +8,7 @@ var CalculatorService;
             numbers[_i] = arguments[_i];
         }
         var sum = 0;
+        console.log('Hello from library');
         numbers.forEach(function (number) { return (sum += number); });
         return sum;
     }
