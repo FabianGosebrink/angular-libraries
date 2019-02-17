@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material';
 import { Observable } from 'rxjs';
+import { share } from 'rxjs/operators';
 import { BookService } from '../../../core/services/book.service';
 import { LoggingService } from '../../../core/services/logging.service';
 import { Book } from '../../../shared/models/book';
@@ -21,13 +22,13 @@ export class BooksOverviewComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.customLoggingService.info('Somebody was asking for all books');
     this.getAllBooks();
   }
 
   bookChanged(book: Book) {
     this.bookService.update(book).subscribe(() => {
       this.getAllBooks();
+      this.customLoggingService.info('Somebody was changing a book');
     });
   }
 
@@ -38,6 +39,6 @@ export class BooksOverviewComponent implements OnInit {
 
   private getAllBooks() {
     const read = this.activeTabIndex === 1;
-    this.currentBooks$ = this.bookService.getAllBooks(read);
+    this.currentBooks$ = this.bookService.getAllBooks(read).pipe(share());
   }
 }
