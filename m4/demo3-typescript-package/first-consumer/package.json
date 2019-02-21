@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && cd dist && node index.js"
+    "start": "tsc && cd dist && node main.js"
   },
-  "author": "",
+  "author": "Fabian Gosebrink",
   "license": "ISC"
 }
