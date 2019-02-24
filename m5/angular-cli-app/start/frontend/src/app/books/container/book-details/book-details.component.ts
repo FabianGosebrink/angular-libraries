@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from '@app/core/services/book.service';
+import { LoggingService } from '@app/core/services/logging.service';
 import { Book } from '@app/shared/models/book';
 import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-book-details',
@@ -16,7 +17,8 @@ export class BookDetailsComponent implements OnInit {
   constructor(
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
-    private readonly bookService: BookService
+    private readonly bookService: BookService,
+    private readonly loggingService: LoggingService
   ) {}
 
   ngOnInit() {
@@ -31,8 +33,11 @@ export class BookDetailsComponent implements OnInit {
       return;
     }
 
-    this.bookService.delete(book.id).subscribe(() => {
-      this.router.navigate(['/books/overview/']);
-    });
+    this.bookService
+      .delete(book.id)
+      .pipe(tap(() => this.loggingService.info('Somebody was deleting a book')))
+      .subscribe(() => {
+        this.router.navigate(['/books/overview/']);
+      });
   }
 }

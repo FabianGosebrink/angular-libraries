@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTabChangeEvent } from '@angular/material';
 import { BookService } from '@app/core/services/book.service';
 import { LoggingService } from '@app/core/services/logging.service';
 import { Book } from '@app/shared/models/book';
-import { Observable } from 'rxjs';
-import { share } from 'rxjs/operators';
 
 @Component({
   selector: 'app-books-overview',
@@ -12,33 +9,44 @@ import { share } from 'rxjs/operators';
   styleUrls: ['./books-overview.component.css'],
 })
 export class BooksOverviewComponent implements OnInit {
-  currentBooks$: Observable<Book[]>;
+  allReadbooks: Book[];
+  allUnreadbooks: Book[];
 
-  private activeTabIndex = 0;
+  activeTabIndex = 0;
 
   constructor(
     private readonly bookService: BookService,
-    private readonly customLoggingService: LoggingService
+    private readonly loggingService: LoggingService
   ) {}
 
   ngOnInit() {
-    this.getAllBooks();
+    this.getBooks(false);
   }
 
   bookChanged(book: Book) {
     this.bookService.update(book).subscribe(() => {
-      this.getAllBooks();
-      this.customLoggingService.info('Somebody was changing a book');
+      this.getBooks(this.currentTabIsReadTab());
+      this.loggingService.info('Somebody was changing a book');
     });
   }
 
-  loadBooks(event: MatTabChangeEvent) {
-    this.activeTabIndex = event.index;
-    this.getAllBooks();
+  loadBooks() {
+    this.getBooks(this.currentTabIsReadTab());
   }
 
-  private getAllBooks() {
-    const read = this.activeTabIndex === 1;
-    this.currentBooks$ = this.bookService.getAllBooks(read).pipe(share());
+  private getBooks(readAlready: boolean) {
+    if (readAlready) {
+      this.bookService
+        .getAllReadBooks()
+        .subscribe((books: Book[]) => (this.allReadbooks = books));
+    } else {
+      this.bookService
+        .getAllUnreadBooks()
+        .subscribe((books: Book[]) => (this.allUnreadbooks = books));
+    }
+  }
+
+  private currentTabIsReadTab() {
+    return this.activeTabIndex === 1;
   }
 }

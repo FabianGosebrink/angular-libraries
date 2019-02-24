@@ -1,14 +1,18 @@
-<mat-tab-group dynamicHeight (selectedTabChange)="loadBooks($event)">
+<mat-tab-group
+  dynamicHeight
+  [(selectedIndex)]="activeTabIndex"
+  (selectedIndexChange)="loadBooks()"
+>
   <mat-tab label="to buy">
     <app-book-list
-      [books]="currentBooks$ | async"
+      [books]="allUnreadbooks"
       (bookChanged)="bookChanged($event)"
     ></app-book-list>
   </mat-tab>
 
   <mat-tab label="read already">
     <app-book-list
-      [books]="currentBooks$ | async"
+      [books]="allReadbooks"
       (bookChanged)="bookChanged($event)"
     ></app-book-list>
   </mat-tab>

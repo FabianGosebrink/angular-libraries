@@ -5,10 +5,16 @@ import { HttpBaseService } from './http-base.service';
 @Injectable({ providedIn: 'root' })
 export class BookService {
   private backendUrl = `https://localhost:5001/api/books`;
+
   constructor(private readonly httpBase: HttpBaseService) {}
 
-  getAllBooks(read?: boolean) {
-    const url = `${this.backendUrl}?read=${read}`;
+  getAllReadBooks() {
+    const url = `${this.backendUrl}?read=true`;
+    return this.httpBase.get<Book[]>(`${url}`);
+  }
+
+  getAllUnreadBooks() {
+    const url = `${this.backendUrl}?read=false`;
     return this.httpBase.get<Book[]>(`${url}`);
   }
 

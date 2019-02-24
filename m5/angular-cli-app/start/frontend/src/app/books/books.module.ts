@@ -17,8 +17,6 @@ import { allPresentationalComponents } from './presentational';
     FormsModule,
     RouterModule.forChild(BooksRoutes),
   ],
-  exports: [],
   declarations: [...allContainerComponents, ...allPresentationalComponents],
-  providers: [],
 })
 export class BooksModule {}
