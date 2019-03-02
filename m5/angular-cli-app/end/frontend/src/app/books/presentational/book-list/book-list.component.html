@@ -1,4 +1,4 @@
-<mat-list *ngIf="books?.length; else: noItems">
+<mat-list *ngIf="books?.length; else noItems">
   <mat-list-item *ngFor="let book of books">
     <h2 matLine>{{ book.title }}</h2>
     <p matLine>

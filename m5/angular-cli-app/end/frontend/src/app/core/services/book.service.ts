@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Book } from '../../shared/models/book';
+import { Book } from '@app/shared/models/book';
 import { HttpBaseService } from './http-base.service';
 
 @Injectable({ providedIn: 'root' })
 export class BookService {
   private backendUrl = `https://localhost:5001/api/books`;
+
   constructor(private readonly httpBase: HttpBaseService) {}
 
-  getAllBooks(read?: boolean) {
-    const url = `${this.backendUrl}?read=${read}`;
+  getAllReadBooks() {
+    const url = `${this.backendUrl}?read=true`;
+    return this.httpBase.get<Book[]>(`${url}`);
+  }
+
+  getAllUnreadBooks() {
+    const url = `${this.backendUrl}?read=false`;
     return this.httpBase.get<Book[]>(`${url}`);
   }
 
@@ -30,7 +36,7 @@ export class BookService {
       { value: 'Action / Adventure', displayName: 'Action / Adventure' },
       { value: 'Satire', displayName: 'Satire' },
       { value: 'Horror', displayName: 'Horror' },
-      { value: 'Novel', displayName: 'Novel' }
+      { value: 'Novel', displayName: 'Novel' },
     ];
   }
 

@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-import { LoggerService, MyLibModule } from 'my-lib';
-import { environment } from '../../environments/environment';
-import { CustomLoggingService } from './services/custom-logging.service';
+import {
+  AngularConsoleLoggerModule,
+  AngularConsoleLoggerService,
+} from 'angular-console-logger';
+import { CustomLoggerService } from './services/custom-logger.service';
 
 @NgModule({
-  imports: [MyLibModule.forRoot({ isProduction: environment.production })],
-  providers: [
-    {
-      provide: LoggerService,
-      useClass: CustomLoggingService
-    }
+  imports: [
+    AngularConsoleLoggerModule.forRoot({
+      isProduction: false,
+      appPrefix: 'pluralsight-app',
+    }),
   ],
-  exports: []
+  providers: [
+    { provide: AngularConsoleLoggerService, useClass: CustomLoggerService },
+  ],
 })
 export class CoreModule {}

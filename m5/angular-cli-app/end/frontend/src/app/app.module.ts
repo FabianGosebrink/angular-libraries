@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 import { CoreModule } from './core/core.module';
-import { MaterialModule } from './shared/material.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +17,8 @@ import { MaterialModule } from './shared/material.module';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule,
 
+    SharedModule,
     CoreModule,
 
     RouterModule.forRoot(AppRoutes, { useHash: true }),

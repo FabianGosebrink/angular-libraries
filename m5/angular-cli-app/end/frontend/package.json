@@ -8,8 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-my-lib": "ng build my-lib",
-    "build-rating": "ng build angular-rating"
+    "build-angular-rating": "ng build angular-rating",
+    "watch-angular-rating": "ng build angular-rating --watch",
+    "build-angular-logging": "ng build angular-console-logger",
+    "watch-angular-logging": "ng build angular-console-logger --watch"
   },
   "private": true,
   "dependencies": {

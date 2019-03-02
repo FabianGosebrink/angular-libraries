@@ -17,10 +17,8 @@ import { allPresentationalComponents } from './presentational';
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forChild(BooksRoutes),
-    AngularRatingModule
+    AngularRatingModule,
   ],
-  exports: [],
   declarations: [...allContainerComponents, ...allPresentationalComponents],
-  providers: []
 })
 export class BooksModule {}

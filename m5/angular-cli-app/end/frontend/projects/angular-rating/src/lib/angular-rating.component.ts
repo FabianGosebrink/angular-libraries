@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     <span class="rating-wrapper">
       <span *ngFor="let option of options">
         <span
-          (click)="addRating(option)"
+          (click)="changeRating(option)"
           [ngClass]="{ rated: option <= rating }"
           >&#9733;</span
         >
@@ -22,11 +22,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       .rating-wrapper {
         cursor: pointer;
       }
-    `
-  ]
+    `,
+  ],
 })
 export class AngularRatingComponent implements OnInit {
-  @Output() ratingChanged = new EventEmitter<number>();
+  @Output() ratingChanged = new EventEmitter();
 
   @Input() rating = 0;
 
@@ -37,10 +37,13 @@ export class AngularRatingComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    // create an array with `count` items
+    // increse every item by one
+    // [1,2,3,4,...]
     this.options = Array.from({ length: this.count }, (v, k) => ++k);
   }
 
-  addRating(rating: number) {
+  changeRating(rating: number) {
     this.ratingChanged.emit(rating);
   }
 }

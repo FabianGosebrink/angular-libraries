@@ -18,17 +18,20 @@
       "dom"
     ],
     "paths": {
-      "my-lib": [
-        "dist/my-lib"
-      ],
-      "my-lib/*": [
-        "dist/my-lib/*"
+      "@app/*": [
+        "src/app/*"
       ],
       "angular-rating": [
         "dist/angular-rating"
       ],
       "angular-rating/*": [
         "dist/angular-rating/*"
+      ],
+      "angular-console-logger": [
+        "dist/angular-console-logger"
+      ],
+      "angular-console-logger/*": [
+        "dist/angular-console-logger/*"
       ]
     }
   }

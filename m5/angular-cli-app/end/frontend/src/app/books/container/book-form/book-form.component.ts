@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { BookService } from '../../../core/services/book.service';
-import { NotificationService } from '../../../core/services/notification.service';
+import { ActivatedRoute } from '@angular/router';
+import { BookService } from '@app/core/services/book.service';
+import { NotificationService } from '@app/core/services/notification.service';
+import { AngularConsoleLoggerService } from 'angular-console-logger';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-book-form',
@@ -15,9 +17,9 @@ export class BookFormComponent implements OnInit {
 
   constructor(
     private readonly bookService: BookService,
-    private readonly router: Router,
     private readonly notificationService: NotificationService,
-    private readonly activatedRoute: ActivatedRoute
+    private readonly activatedRoute: ActivatedRoute,
+    private readonly loggingService: AngularConsoleLoggerService
   ) {}
 
   ngOnInit() {
@@ -34,10 +36,14 @@ export class BookFormComponent implements OnInit {
     if (!!this.form.value.id) {
       this.bookService
         .update(this.form.value)
+        .pipe(
+          tap(() => this.loggingService.info('Somebody was updating a book'))
+        )
         .subscribe(() => this.notificationService.show('Book updated'));
     } else {
       this.bookService
         .add(this.form.value)
+        .pipe(tap(() => this.loggingService.info('Somebody was adding a book')))
         .subscribe(() => this.notificationService.show('Book added'));
     }
   }

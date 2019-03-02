@@ -5,6 +5,6 @@ import { AngularRatingComponent } from './angular-rating.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [AngularRatingComponent],
-  exports: [AngularRatingComponent]
+  exports: [AngularRatingComponent],
 })
 export class AngularRatingModule {}
