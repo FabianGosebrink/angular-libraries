@@ -1,0 +1,10 @@
+.fab-bottom-right {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 100;
+}
+
+.fab-bottom-right a {
+  color: white;
+}

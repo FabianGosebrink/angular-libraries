@@ -1,0 +1,34 @@
+<div class="button-row">
+  <a mat-raised-button routerLink="/books/overview">To Overview</a>
+</div>
+
+<div *ngIf="book$ | async as book; else noBook">
+  <form>
+    <div class="form-container">
+
+      <mat-form-field>
+        <input matInput placeholder="Title" [value]="book.title" readonly disabled>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Author" [value]="book.author" readonly disabled>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Description" [value]="book.description" readonly disabled></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Genre" [value]="book.genre" readonly disabled>
+      </mat-form-field>
+
+    </div>
+  </form>
+
+  <div class="button-row">
+    <a mat-raised-button color="primary" [routerLink]="['/books/edit/', book.id]">Edit</a>
+    <a mat-raised-button color="warn" (click)="deleteBook(book)">Delete</a>
+  </div>
+</div>
+
+<ng-template #noBook>Could not find the book</ng-template>
