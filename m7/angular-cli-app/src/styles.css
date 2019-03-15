@@ -1,0 +1,30 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,300';
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+mat-form-field[hidden] {
+  display: none;
+}

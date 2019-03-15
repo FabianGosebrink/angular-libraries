@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "angular-rating": [
+        "dist/angular-rating"
+      ],
+      "angular-rating/*": [
+        "dist/angular-rating/*"
+      ],
+      "angular-console-logger": [
+        "dist/angular-console-logger"
+      ],
+      "angular-console-logger/*": [
+        "dist/angular-console-logger/*"
+      ]
+    }
+  }
+}

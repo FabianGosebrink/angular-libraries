@@ -1,0 +1,21 @@
+{
+  "name": "@fabiangosebrink/angular-console-logger",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@angular/common": ">=7.0.0",
+    "@angular/core": ">=7.0.0"
+  },
+  "main": "bundles/fabiangosebrink-angular-console-logger.umd.js",
+  "module": "fesm5/fabiangosebrink-angular-console-logger.js",
+  "es2015": "fesm2015/fabiangosebrink-angular-console-logger.js",
+  "esm5": "esm5/fabiangosebrink-angular-console-logger.js",
+  "esm2015": "esm2015/fabiangosebrink-angular-console-logger.js",
+  "fesm5": "fesm5/fabiangosebrink-angular-console-logger.js",
+  "fesm2015": "fesm2015/fabiangosebrink-angular-console-logger.js",
+  "typings": "fabiangosebrink-angular-console-logger.d.ts",
+  "metadata": "fabiangosebrink-angular-console-logger.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

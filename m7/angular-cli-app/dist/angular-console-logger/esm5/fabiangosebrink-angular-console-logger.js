@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { AbstractLoggerService, AngularConsoleLoggerService, AngularConsoleLoggerComponent, AngularConsoleLoggerModule } from './public_api';
+export { LoggerConfig as ɵa } from './lib/logger.config';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmFiaWFuZ29zZWJyaW5rLWFuZ3VsYXItY29uc29sZS1sb2dnZXIuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AZmFiaWFuZ29zZWJyaW5rL2FuZ3VsYXItY29uc29sZS1sb2dnZXIvIiwic291cmNlcyI6WyJmYWJpYW5nb3NlYnJpbmstYW5ndWxhci1jb25zb2xlLWxvZ2dlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBSUEsOEhBQWMsY0FBYyxDQUFDO0FBRTdCLE9BQU8sRUFBQyxZQUFZLElBQUksRUFBRSxFQUFDLE1BQU0scUJBQXFCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEdlbmVyYXRlZCBidW5kbGUgaW5kZXguIERvIG5vdCBlZGl0LlxuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vcHVibGljX2FwaSc7XG5cbmV4cG9ydCB7TG9nZ2VyQ29uZmlnIGFzIMm1YX0gZnJvbSAnLi9saWIvbG9nZ2VyLmNvbmZpZyc7Il19

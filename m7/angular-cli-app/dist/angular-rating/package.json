@@ -1,0 +1,21 @@
+{
+  "name": "@fabiangosebrink/angular-rating",
+  "version": "0.0.6",
+  "peerDependencies": {
+    "@angular/common": ">=7.0.0",
+    "@angular/core": ">=7.0.0"
+  },
+  "main": "bundles/fabiangosebrink-angular-rating.umd.js",
+  "module": "fesm5/fabiangosebrink-angular-rating.js",
+  "es2015": "fesm2015/fabiangosebrink-angular-rating.js",
+  "esm5": "esm5/fabiangosebrink-angular-rating.js",
+  "esm2015": "esm2015/fabiangosebrink-angular-rating.js",
+  "fesm5": "fesm5/fabiangosebrink-angular-rating.js",
+  "fesm2015": "fesm2015/fabiangosebrink-angular-rating.js",
+  "typings": "fabiangosebrink-angular-rating.d.ts",
+  "metadata": "fabiangosebrink-angular-rating.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
