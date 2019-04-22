@@ -2,6 +2,8 @@
 
 This is the repository for my course "Structuring Angular Applications with Angular Libraries" at Pluralsight
 
+![pluralsight-background](./.github/pluralsight-background.jpg)
+
 ## Getting started
 
 ### Backend
