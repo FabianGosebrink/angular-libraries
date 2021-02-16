@@ -21,7 +21,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     CoreModule,
 
-    RouterModule.forRoot(AppRoutes, { useHash: true }),
+    RouterModule.forRoot(AppRoutes, { useHash: true, relativeLinkResolution: 'legacy' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
